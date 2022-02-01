@@ -56,7 +56,7 @@ function Projects() {
               imgPath={suicide}
               isBlog={false}
               title="Astrozens Developer/Moderator/Collabs Manager"
-              link="https://github.com/soumyajit4419/AI_For_Social_Good"
+              link="https://discord.gg/GJEuF2mYSr"
             />
           </Col>
 
@@ -65,7 +65,7 @@ function Projects() {
               imgPath={emotion}
               isBlog={false}
               title="RebelSols Moderator/Collab Manager"
-              link="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              link="https://discord.gg/NbJuCNx9XF"
             />
           </Col>
         </Row>
