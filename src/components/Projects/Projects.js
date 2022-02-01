@@ -1,0 +1,77 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import ProjectCard from "./ProjectCards";
+import Particle from "../Particle";
+
+import leaf from "../../Assets/Projects/nftapps.PNG";
+import emotion from "../../Assets/home-main.svg";
+import editor from "../../Assets/Projects/Astrozen-LandingPage.PNG";
+import chatify from "../../Assets/Projects/Astrozen-MintingPage.PNG";
+import suicide from "../../Assets/home-main.svg";
+
+function Projects() {
+  return (
+    <Container fluid className="project-section">
+      <Particle />
+      <Container>
+        <h1 className="project-heading">
+          My Recent <strong className="purple">Works </strong>
+        </h1>
+        <p style={{ color: "white" }}>
+          Here are a few projects I've worked on recently.
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Astrozen Minting Page"
+              description="Astrozens is a collection of 1,111 Astrozen NFTs"
+              link="https://astro-minting-example.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={leaf}
+              isBlog={false}
+              title="NFT App"
+              description="Staking and Claiming Website"
+              link="https://nfa-v1.web.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={editor}
+              isBlog={false}
+              title="Astrozen Landing Page"
+              description="Astrozens is a collection of 1,111 Astrozen NFTs"
+              link="https://astrozen.art"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={suicide}
+              isBlog={false}
+              title="Astrozens Developer/Moderator/Collabs Manager"
+              link="https://github.com/soumyajit4419/AI_For_Social_Good"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={emotion}
+              isBlog={false}
+              title="RebelSols Moderator/Collab Manager"
+              link="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+            />
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+  );
+}
+
+export default Projects;
