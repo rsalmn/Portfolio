@@ -8,7 +8,7 @@ import emotion from "../../Assets/home-main.svg";
 import editor from "../../Assets/Projects/Astrozen-LandingPage.PNG";
 import chatify from "../../Assets/Projects/Astrozen-MintingPage.PNG";
 import suicide from "../../Assets/home-main.svg";
-import solana from "../../Assets/SolanaDex.PNG";
+import solana from "../../Assets/Projects/SolanaDex.PNG";
 
 function Projects() {
   return (
