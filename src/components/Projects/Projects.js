@@ -9,6 +9,7 @@ import editor from "../../Assets/Projects/Astrozen-LandingPage.PNG";
 import chatify from "../../Assets/Projects/Astrozen-MintingPage.PNG";
 import suicide from "../../Assets/home-main.svg";
 import solana from "../../Assets/Projects/SolanaDex.PNG";
+import nftmarketplace from "../../Assets/Projects/ERC721-Marketplace.PNG";
 
 function Projects() {
   return (
@@ -30,6 +31,16 @@ function Projects() {
               title="NFT App"
               description="Staking and Claiming Website"
               link="https://nfa-v1.web.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={nftmarketplace}
+              isBlog={false}
+              title="NFT Marketplace"
+              description="NFT Marketplace (ERC721)"
+              link="https://nft-marketplace.radensalman.codes/"
             />
           </Col>
 
