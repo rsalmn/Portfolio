@@ -6,9 +6,10 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "Frontend Web Developer",
-          "SmartContract Development",
-          "Moderator/Staff Menager on Discord",
+          "Telegram & Discord Bot Development",
+          "Android App Development",
+          "Front-end & Back-end Developer",
+          "Cryptocurrency Smart Contract Developer",
         ],
         autoStart: true,
         loop: true,
