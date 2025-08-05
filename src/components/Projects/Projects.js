@@ -94,6 +94,15 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={suicide}
+              isBlog={false}
+              title="Website for Rent a drone"
+              link="https://indroneku.com"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={emotion}
               isBlog={false}
               title="RebelSols Moderator/Collab Manager"
