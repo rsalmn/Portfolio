@@ -1,0 +1,249 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Container */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Global Button Styles */
+button {
+  font-family: inherit;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessible Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .footer,
+  .scroll-indicator,
+  .refresh-btn {
+    display: none;
+  }
+
+  main {
+    margin-top: 0;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+  .section-container {
+    padding: 0 1.5rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 0 1rem;
+  }
+
+  /* Reduce font sizes on mobile */
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+
+  /* Touch-friendly buttons */
+  button,
+  a[role="button"],
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Increase tap target size */
+  .nav-link,
+  .project-link,
+  .social-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Dark Theme - Keep as default */
+:root {
+  color-scheme: dark;
+}
+
+/* Prevent text selection on interactive elements */
+.btn,
+button,
+a,
+.social-link,
+.nav-link {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Performance Optimization */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animation Performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Grid Layout */
+@supports (display: grid) {
+  .projects-grid,
+  .skills-grid {
+    display: grid;
+  }
+}
+
+/* Fallback for non-supporting browsers */
+@supports not (display: grid) {
+  .projects-grid,
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: var(--primary) var(--bg-dark);
+  scrollbar-width: thin;
+}
+
+/* Link styles */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Code block styles */
+code {
+  background: var(--bg-card);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: var(--primary);
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+/* Form elements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+/* Prevent layout shift */
+html {
+  overflow-y: scroll;
+}
+
+/* Safe area for mobile notch */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
